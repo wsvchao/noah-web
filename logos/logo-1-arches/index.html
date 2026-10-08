@@ -1,0 +1,195 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>body{margin:0}</style><title>Noah 与 Ark 标志</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&family=Cormorant+Garamond:wght@600;700&family=Noto+Serif+SC:wght@600;700&display=swap">
+<style>
+/* Layout: one shared mark grid; pair lockup first, then each mark, then the combined emblem and its meaning */
+:root{
+  --bg:#f5f6f8; --surface:#ffffff; --ink:#18202b; --muted:#5a6573; --line:#dde1e7;
+  --navy:#1f3a68; --gold:#a8812c; --orange:#e8920c; --panel-dark:#141b26;
+  --serif:"Cormorant Garamond",Georgia,serif; --tc:"Noto Serif SC","PMingLiU",serif;
+  --disp:"Barlow Condensed","Arial Narrow",Arial,sans-serif; --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f141c; --surface:#18202b; --ink:#e8ecf1; --muted:#9aa5b4; --line:#2a3340;
+  --navy:#8fb0e6; --gold:#d4ab55; --orange:#f7ab2c; --panel-dark:#0a0e14; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f141c; --surface:#18202b; --ink:#e8ecf1; --muted:#9aa5b4; --line:#2a3340;
+  --navy:#8fb0e6; --gold:#d4ab55; --orange:#f7ab2c; --panel-dark:#0a0e14; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:clamp(32px,6vw,64px)}
+h1,h2,h3{font-family:var(--disp);text-transform:uppercase;margin:0;line-height:1.05;text-wrap:balance}
+h1{font-size:clamp(38px,6vw,64px);font-weight:700}
+h2{font-size:clamp(26px,3.6vw,36px);font-weight:700;margin-bottom:6px}
+h3{font-size:22px;font-weight:600}
+.eyebrow{font:600 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.lede{max-width:62ch;color:var(--muted);margin:14px 0 0}
+section{margin-top:clamp(40px,6vw,72px)}
+section > p.sub{color:var(--muted);margin:0 0 22px;max-width:62ch}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:clamp(24px,4vw,48px);display:flex;justify-content:center;align-items:center;min-width:0}
+.panel.dark{background:var(--panel-dark);border-color:transparent;--navy:#8fb0e6;--gold:#d4ab55;--orange:#f7ab2c;--ink:#e8ecf1;--muted:#9aa5b4;color:var(--ink)}
+
+/* marks */
+.mark{display:block;width:100%;height:auto}
+.n{fill:none;stroke:var(--navy)} .g{fill:none;stroke:var(--gold)} .o{fill:none;stroke:var(--orange)}
+.fn{fill:var(--navy)} .fg{fill:var(--gold)} .fo{fill:var(--orange)}
+
+/* pair lockup */
+.pair{display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,36px);flex-wrap:wrap;min-width:0}
+.unit{display:flex;align-items:center;gap:clamp(10px,1.6vw,18px);min-width:0}
+.unit .mark{width:clamp(64px,9vw,96px);flex:none}
+.words{display:flex;flex-direction:column;gap:6px;min-width:0}
+.w-main{font:700 clamp(30px,4.4vw,46px)/.9 var(--serif);color:var(--gold);letter-spacing:.02em}
+.w-sub{font:600 clamp(10px,1.3vw,12px)/1 var(--disp);letter-spacing:.34em;text-transform:uppercase;color:var(--navy)}
+.w-zh{font:700 clamp(18px,2.4vw,24px)/1 var(--tc);color:var(--gold);letter-spacing:.14em}
+.divider{width:2px;align-self:stretch;min-height:64px;background:linear-gradient(var(--gold),var(--navy));opacity:.5}
+@media (max-width:700px){.divider{display:none}.pair{flex-direction:column;align-items:flex-start}}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:16px;min-width:0}
+.card .mark{width:clamp(140px,22vw,200px);align-self:center}
+.card p{margin:0;color:var(--muted)}
+.role{font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.card ul{margin:0;padding-left:20px;color:var(--muted)}
+.card li{margin-bottom:6px}
+@media (max-width:760px){.cards{grid-template-columns:1fr}}
+
+.emblem-row{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:stretch}
+.emblem-row > *{min-width:0}
+.emblem{width:min(100%,360px)}
+.stack{display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.stack .w-main{font-size:clamp(34px,5vw,50px)}
+@media (max-width:760px){.emblem-row{grid-template-columns:1fr}}
+
+table{width:100%;border-collapse:collapse;font-size:16px}
+.tbl{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:6px}
+th,td{text-align:left;padding:14px 18px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td:first-child{white-space:nowrap;font-weight:600}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:8px;vertical-align:-1px}
+.note{margin-top:20px;border-left:3px solid var(--orange);padding:6px 0 6px 14px;color:var(--muted);max-width:70ch}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <!-- NOAH: three nested arches (covenant bow / doorway of the ark / rack uprights). viewBox 0 0 120 120 -->
+    <symbol id="noah" viewBox="0 0 120 120">
+      <path class="n" stroke-width="11" d="M6.5 112V60a53.5 53.5 0 0 1 107 0v52"/>
+      <path class="g" stroke-width="11" d="M30 112V60a30 30 0 0 1 60 0v52"/>
+      <path class="fo" d="M52 112V62a8 8 0 0 1 16 0v50Z"/>
+    </symbol>
+    <!-- ARK: hull in three decks (Gen 6:16) carrying the same arch as a cabin and door. viewBox 0 0 120 120 -->
+    <symbol id="ark" viewBox="0 0 120 120">
+      <clipPath id="hull"><path d="M4 66H116L102 100Q60 120 18 100Z"/></clipPath>
+      <g clip-path="url(#hull)" class="fn">
+        <rect x="0" y="66" width="120" height="12"/>
+        <rect x="0" y="82" width="120" height="12"/>
+        <rect x="0" y="98" width="120" height="24"/>
+      </g>
+      <path class="fg" d="M30 62V44a30 30 0 0 1 60 0v18Z"/>
+      <path class="fo" d="M50 62V52a10 10 0 0 1 20 0v10Z"/>
+    </symbol>
+    <!-- Combined: Noah's bow over the Ark. viewBox 0 0 240 180 -->
+    <symbol id="both" viewBox="0 0 240 180">
+      <path class="n" stroke-width="11" d="M14 112a106 106 0 0 1 212 0"/>
+      <path class="g" stroke-width="11" d="M34 112a86 86 0 0 1 172 0"/>
+      <path class="o" stroke-width="11" d="M54 112a66 66 0 0 1 132 0"/>
+      <g transform="translate(70 66) scale(.83)">
+        <clipPath id="hull2"><path d="M4 66H116L102 100Q60 120 18 100Z"/></clipPath>
+        <g clip-path="url(#hull2)" class="fn">
+          <rect x="0" y="66" width="120" height="12"/><rect x="0" y="82" width="120" height="12"/><rect x="0" y="98" width="120" height="24"/>
+        </g>
+        <path class="fg" d="M30 62V44a30 30 0 0 1 60 0v18Z"/>
+        <path class="fo" d="M50 62V52a10 10 0 0 1 20 0v10Z"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="wrap">
+  <header>
+    <span class="eyebrow">品牌标志 · Noah Infrastructure LLC 与 Ark Infrastructure Technology</span>
+    <h1>Noah and Ark, One Family</h1>
+    <p class="lede">两个标志用同一个网格、同样的线条和同样的三种颜色画成。Noah 是拱门，Ark 是承载拱门的船。放在一起，就是一个故事：应许与蓝图。</p>
+  </header>
+
+  <section>
+    <h2>一组标志</h2>
+    <p class="sub">母公司与子公司并排使用：同样的高度、同样的基线、同样的颜色。</p>
+    <div class="panel">
+      <div class="pair">
+        <div class="unit">
+          <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Noah 标志：三道相套的拱门"><use href="#noah"/></svg>
+          <div class="words"><span class="w-main">NOAH</span><span class="w-sub">Infrastructure</span></div>
+        </div>
+        <div class="divider"></div>
+        <div class="unit">
+          <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Ark mark: a hull with three decks and an arched cabin"><use href="#ark"/></svg>
+          <div class="words"><span class="w-main">ARK</span><span class="w-zh">方舟基建</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="panel dark" style="margin-top:16px">
+      <div class="pair">
+        <div class="unit">
+          <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Noah mark on dark"><use href="#noah"/></svg>
+          <div class="words"><span class="w-main">NOAH</span><span class="w-sub">Infrastructure</span></div>
+        </div>
+        <div class="divider"></div>
+        <div class="unit">
+          <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Ark mark on dark"><use href="#ark"/></svg>
+          <div class="words"><span class="w-main">ARK</span><span class="w-zh">方舟基建</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>各自独立使用</h2>
+    <p class="sub">单独使用时，在名片、货架标签或网站页首都清楚好认。</p>
+    <div class="cards">
+      <article class="card">
+        <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Noah mark"><use href="#noah"/></svg>
+        <div><span class="role">母公司 · 美国</span><h3>Noah Infrastructure LLC</h3></div>
+        <p>三道层层相套的拱门。它像彩虹，是上帝与挪亚立约的记号；也像方舟敞开的门。同时它也像货架的立柱，让标志与公司的工作连在一起。</p>
+      </article>
+      <article class="card">
+        <svg class="mark" viewBox="0 0 120 120" role="img" aria-label="Ark mark"><use href="#ark"/></svg>
+        <div><span class="role">子公司 · 台湾</span><h3>方舟基建 · Ark Infrastructure Technology</h3></div>
+        <p>船身分为三层，如同方舟（创世记 6:16）。上面是 Noah 的拱门，在这里成为船舱与舱门。三道横带也像货架的三层横梁。</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>合在一起</h2>
+    <p class="sub">Noah 的拱门升在 Ark 之上。这是完整的家族徽记，适合用在网站页尾、印章、简报封面或墙面招牌。</p>
+    <div class="emblem-row">
+      <div class="panel"><div class="stack">
+        <svg class="mark emblem" viewBox="0 0 240 180" role="img" aria-label="Noah's arches over the Ark"><use href="#both"/></svg>
+      </div></div>
+      <div class="panel dark"><div class="stack">
+        <svg class="mark emblem" viewBox="0 0 240 180" role="img" aria-label="Combined emblem on dark"><use href="#both"/></svg>
+        <span class="w-main">NOAH · ARK</span>
+        <span class="w-sub">Built for SI Infrastructure</span>
+      </div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>各部分的意义</h2>
+    <p class="sub">意义就在形状里，标志本身不需要文字说明。</p>
+    <div class="tbl"><table>
+      <thead><tr><th>形状</th><th>意义</th><th>与业务的关系</th></tr></thead>
+      <tbody>
+        <tr><td><span class="sw" style="background:var(--navy)"></span>外层拱门 / 船身</td><td>上帝设计的方舟，以及他交给挪亚的建造蓝图（创世记 6:14–16）。</td><td>按蓝图建造的结构，先把承重与安全算清楚。</td></tr>
+        <tr><td><span class="sw" style="background:var(--gold)"></span>中层拱门 / 船舱</td><td>挪亚，上帝拣选并把蓝图托付的人。金色代表宝贵。</td><td>每个项目背后的人与工程专业。</td></tr>
+        <tr><td><span class="sw" style="background:var(--orange)"></span>内层拱门 / 舱门</td><td>方舟唯一的门，以及彩虹的应许（创世记 9:13）。橘色是安全色。</td><td>安全，也是让使用系统的人得以进入的入口。</td></tr>
+        <tr><td>三个层次</td><td>方舟的下层、第二层和第三层。</td><td>货架的三层，数据中心机房的三个层面。</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">这是供审阅的草稿。颜色与网站一致（深蓝、金色、安全橘）。这里的字体只是暂代：英文用 Cormorant Garamond，方舟基建用 Noto Serif SC。圣经经文与用字，请在放进任何公开文字之前，再以牧者的眼光确认。</p>
+  </section>
+</div>

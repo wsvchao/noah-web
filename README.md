@@ -1,8 +1,12 @@
-# Noah Infrastructure website drafts
+# Noah Infrastructure drafts
 
-Two design drafts for internal review.
+Website versions (open each folder's index.html):
+- v1-orange/ : first logo set (arches and hull)
+- v2-navy/ : navy and gold logos
+- v3-lineart/ : line-art logos (dove, server racks, ark)
 
-- v1-orange/
-- v2-navy/
+Logo design notes (Simplified Chinese): logos/logo-1-arches, logo-2-navy-gold, logo-3-lineart
+Vector logo files (SVG): logos/vector/
 
-Photos marked "Illustrative image" are AI-generated. The contact form is not connected yet.
+Notes: photos marked "Illustrative image" are AI-generated. The contact form is not connected yet.
+Logos are AI-generated concepts, traced to vector. Text should be redrawn by a designer, and a trademark check is needed before registration.
